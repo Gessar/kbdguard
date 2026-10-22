@@ -1,0 +1,34 @@
+{
+  "id": "kbdguard",
+  "name": "Keyboard Guard",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "4.0.0",
+  "author": "Gessar",
+  "license": "MIT",
+  "repository": "https://github.com/Gessar/kbdguard",
+  "description": "Switch the laptop's internal keyboard off with a key gesture (Ctrl+Alt). Bar widget, panel with per-device control, and protection against turning off the last keyboard.",
+  "tags": [
+    "Bar",
+    "Panel",
+    "System",
+    "Utility",
+    "Niri"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "cliPath": "kbdguard",
+      "pollIntervalMs": 2000,
+      "hideWhenUnavailable": false,
+      "iconColor": "none"
+    }
+  }
+}

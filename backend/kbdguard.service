@@ -1,0 +1,19 @@
+[Unit]
+Description=kbdguard — переключатель встроенной клавиатуры (жест Ctrl+Alt)
+Documentation=https://github.com/Gessar/kbdguard
+After=multi-user.target
+
+[Service]
+Type=simple
+# __USER__ заменяется на пользователя графической сессии при установке:
+# от его имени отправляются уведомления notify-send.
+Environment=KB_USER=__USER__
+ExecStart=/usr/bin/python3 /usr/local/bin/kbdguard daemon
+Restart=always
+RestartSec=1
+KillSignal=SIGTERM
+# демон работает с /dev/input и /dev/uinput
+PrivateDevices=no
+
+[Install]
+WantedBy=multi-user.target

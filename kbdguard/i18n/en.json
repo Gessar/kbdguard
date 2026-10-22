@@ -1,0 +1,69 @@
+{
+  "widget": {
+    "tooltip": {
+      "on": "Internal keyboard is enabled",
+      "off": "Internal keyboard is disabled",
+      "unavailable": "kbdguard: daemon is not running"
+    }
+  },
+  "menu": {
+    "enable": "Enable keyboard",
+    "disable": "Disable keyboard",
+    "panel": "Open panel",
+    "refresh": "Refresh state",
+    "settings": "Widget settings"
+  },
+  "panel": {
+    "title": "Keyboard",
+    "refresh": "Refresh",
+    "state": {
+      "on": "Internal keyboard is enabled",
+      "off": "Internal keyboard is disabled",
+      "description": "Toggle with the key gesture on the internal keyboard, or with this switch"
+    },
+    "devices": {
+      "title": "Devices",
+      "empty": "No managed keyboards. Check the devices list in /etc/kbdguard/config.toml",
+      "internal": "internal",
+      "external": "external"
+    },
+    "protect": {
+      "label": "Never disable the last keyboard",
+      "description": "Disabling is refused when no enabled keyboard would remain"
+    },
+    "gesture": {
+      "label": "Gesture: {gesture}",
+      "hint": "Hold Ctrl and press Alt on the internal keyboard. A third key cancels the gesture. For niri you can also bind: Mod+Shift+K -> kbdguard toggle"
+    },
+    "daemon": {
+      "missing": "Cannot reach the kbdguard daemon",
+      "hint": "Install the backend (backend/install.sh) and start it: sudo systemctl start kbdguard",
+      "retry": "Retry"
+    }
+  },
+  "settings": {
+    "cli": {
+      "label": "CLI path",
+      "description": "kbdguard command (from PATH by default)"
+    },
+    "poll": {
+      "label": "Poll interval",
+      "description": "How often the widget asks the daemon for its state",
+      "1s": "1 second",
+      "2s": "2 seconds",
+      "5s": "5 seconds"
+    },
+    "hide": {
+      "label": "Hide without daemon",
+      "description": "Do not show the icon when the daemon is not running"
+    },
+    "backend": {
+      "hint": "The daemon and its configuration live in backend/ of the plugin repository. Gesture and device list are configured in /etc/kbdguard/config.toml"
+    },
+    "saved": "Settings saved"
+  },
+  "notifications": {
+    "title": "Keyboard",
+    "failed": "Command failed"
+  }
+}
